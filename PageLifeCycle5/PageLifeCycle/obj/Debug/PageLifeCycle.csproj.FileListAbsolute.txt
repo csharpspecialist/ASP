@@ -1,0 +1,6 @@
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\bin\PageLifeCycle.dll.config
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\bin\PageLifeCycle.dll
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\bin\PageLifeCycle.pdb
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\obj\Debug\PageLifeCycle.dll
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\obj\Debug\PageLifeCycle.pdb
+c:\users\cellph-check-in\documents\visual studio 2015\Projects\PageLifeCycle\PageLifeCycle\obj\Debug\PageLifeCycle.csprojResolveAssemblyReference.cache
