@@ -1,0 +1,30 @@
+﻿
+@model List<HelloPrac1.Models.Drive>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index Page</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Words <br />
+        @ViewBag.Myst
+    </div>
+
+    <h2>We Don't Like Your Hat!!!!</h2>
+
+    <button> Weirdo!!</button>
+
+    @foreach (var car in Model)
+    {
+        <p> @car.Id - @car.Make - @car.Model</p>
+    }
+
+</body>
+</html>
