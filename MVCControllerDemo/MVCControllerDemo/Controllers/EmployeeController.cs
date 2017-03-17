@@ -9,9 +9,10 @@ namespace MVCControllerDemo.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
-        public ActionResult Index()
+        public ActionResult Search(string name)
         {
-            return View();
+            //var input = Server.HtmlEncode(name);
+            return Content(name);
         }
     }
 }
