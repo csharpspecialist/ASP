@@ -20,7 +20,7 @@ namespace HelloPrac1.Controllers
             var vehicles = HelloModel.GetCarInfo();
            
 
-            return View(vehicles);
+            return View();
         }
     }
 }
