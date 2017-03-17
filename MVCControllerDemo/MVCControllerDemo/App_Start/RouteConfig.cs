@@ -12,7 +12,7 @@ namespace MVCControllerDemo
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+//had to move this newly created route up to the front so that it was looked at first.  This made the project work!!
             routes.MapRoute(
      name: "Employee",
       url: "{Employee}/{name}",
