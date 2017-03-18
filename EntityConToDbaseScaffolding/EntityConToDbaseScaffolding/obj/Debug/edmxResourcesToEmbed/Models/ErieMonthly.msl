@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShieldModelStoreContainer" CdmEntityContainer="ShieldEntities3">
+    <EntitySetMapping Name="DailyErieTemp3">
+      <EntityTypeMapping TypeName="ShieldModel.DailyErieTemp3">
+        <MappingFragment StoreEntitySet="DailyErieTemp3">
+          <ScalarProperty Name="TempID" ColumnName="TempID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
