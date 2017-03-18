@@ -1,0 +1,52 @@
+﻿
+@model List<HelloPrac1.Models.Drive>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index Page</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Words <br />
+        @ViewBag.Myst  <br />
+        @ViewBag.Wind  <br />
+    </div>
+
+    <h2>We Don't Like Your Hat!!!!</h2>
+
+    <button> Weirdo!!</button>
+
+    @foreach (var car in Model)
+    {
+        <p> @car.Id - @car.Make - @car.Model</p>
+    }
+
+    @*below is a razor code block*@
+    @{
+        var smash = "There can be only 1";
+
+        <h2>@smash</h2>
+
+
+    }
+
+
+    @*below's code block is a mixture of razor and html which is a mixed expression*@
+    @{
+
+        var prodId = 123;
+
+        <p>Prod ID is @prodId</p>
+
+    }
+
+</body>
+</html>
