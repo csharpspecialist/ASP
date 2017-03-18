@@ -1,0 +1,34 @@
+﻿@model MVCDbasePrac2.Models.Burger
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Burger</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BurgerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BurgerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BurgerPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BurgerPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BurgerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
