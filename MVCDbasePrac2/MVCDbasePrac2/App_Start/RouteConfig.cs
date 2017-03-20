@@ -15,8 +15,9 @@ namespace MVCDbasePrac2
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{id}",//changed the name below from "Home" to "Burgers" 
+                //since no home controller was created for this project
+                defaults: new { controller = "Burgers", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
