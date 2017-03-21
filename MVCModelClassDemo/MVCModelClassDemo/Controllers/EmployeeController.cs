@@ -12,9 +12,14 @@ namespace MVCModelClassDemo.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            var employees = from e in GetEmployeeList()
-                          orderby e.Id
-                          select e;
+            //var employees = from e in GetEmployeeList()
+            //                orderby e.Id
+            //                select e;
+
+
+            var employees = from e in empList
+                           orderby e.Id
+                           select e;
             return View(employees);
         }
 
@@ -49,7 +54,10 @@ namespace MVCModelClassDemo.Controllers
         // GET: Employee/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+
+            List<Employee> empList = GetEmployeeList();
+            var employee = empList.Single(m => m.Id == id);
+            return View(employee);
         }
 
         // POST: Employee/Edit/5
@@ -58,9 +66,16 @@ namespace MVCModelClassDemo.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                var employee = empList.Single(m => m.Id == id);
+                if(TryUpdateModel(employee))
+                {
+                    //TODO : Database Code goes here!!
+                    return RedirectToAction("Index");
 
-                return RedirectToAction("Index");
+                }
+
+
+                return View(employee);
             }
             catch
             {
@@ -105,8 +120,8 @@ namespace MVCModelClassDemo.Controllers
                     , Age = 33
                 },
                         new Employee
-                { 
-                          
+                {
+
                     Id = 2, Name = "Bruce Wayne"
                     , JoinDate = DateTime.Parse(DateTime.Today.ToString())
                     , Age = 44
@@ -132,9 +147,47 @@ namespace MVCModelClassDemo.Controllers
                         Age = 20
 
                     },
-                };           
+                };
 
         }
+
+
+        public static List<Employee> empList = new List<Employee>
+        {
+
+            new Employee
+            {
+                Id = 1,
+                JoinDate = DateTime.Parse(DateTime.Today.ToShortDateString())
+                , Name = "Arthur Curry"
+                , Age = 27
+            },
+
+                 new Employee
+            {
+                Id = 2,
+                JoinDate = DateTime.Parse(DateTime.Today.ToShortDateString())
+                , Name = "Rogue"
+                , Age = 30
+            },
+
+                      new Employee
+            {
+                Id = 3,
+                JoinDate = DateTime.Parse(DateTime.Today.ToShortDateString())
+                , Name = "Barbara Gordon"
+                , Age = 27
+            },
+
+                        new Employee
+                {
+                    Id = 4,
+                    JoinDate = DateTime.Parse(DateTime.Today.ToShortDateString())
+                    , Name = "Dick Grayson"
+                    , Age = 21
+                }
+        };
+
     }
 }
 
