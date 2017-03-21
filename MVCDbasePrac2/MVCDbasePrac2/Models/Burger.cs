@@ -11,9 +11,11 @@ namespace MVCDbasePrac2.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Burger
     {
+        [Display(Name = "Burger Name")]
         public int BurgerId { get; set; }
         public string BurgerName { get; set; }
         public Nullable<decimal> BurgerPrice { get; set; }
