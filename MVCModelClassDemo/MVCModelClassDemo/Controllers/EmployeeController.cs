@@ -12,7 +12,10 @@ namespace MVCModelClassDemo.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            return View();
+            var employees = from e in GetEmployeeList()
+                          orderby e.Id
+                          select e;
+            return View(employees);
         }
 
         // GET: Employee/Details/5
@@ -109,7 +112,6 @@ namespace MVCModelClassDemo.Controllers
                     , Age = 44
 
                 },
-
 
                     new Employee
                     {
