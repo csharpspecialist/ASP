@@ -37,11 +37,28 @@ namespace MVCModelClassDemo.Controllers
 
         // POST: Employee/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Employee emp)
         {
             try
             {
                 // TODO: Add insert logic here
+                //FormCollection collection
+
+                //using Form collection
+                //Employee emp = new Employee();
+
+                //emp.Name = collection["Name"];
+                //DateTime jDate;
+                //DateTime.TryParse(collection["DOB"], out jDate);
+                //emp.JoinDate = jDate;
+                //string age = collection["Age"];
+                //emp.Age = Int32.Parse(age);
+                //empList.Add(emp);
+
+
+                //Use Employee Model
+                empList.Add(emp);
+
 
                 return RedirectToAction("Index");
             }

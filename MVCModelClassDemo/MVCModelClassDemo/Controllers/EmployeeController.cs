@@ -12,14 +12,14 @@ namespace MVCModelClassDemo.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            //var employees = from e in GetEmployeeList()
-            //                orderby e.Id
-            //                select e;
+            var employees = from e in GetEmployeeList()
+                            orderby e.Id
+                            select e;
 
 
-            var employees = from e in empList
-                           orderby e.Id
-                           select e;
+            //var employees = from e in empList
+            //               orderby e.Id
+            //               select e;
             return View(employees);
         }
 
