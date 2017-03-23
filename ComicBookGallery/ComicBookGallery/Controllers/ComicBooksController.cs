@@ -9,10 +9,17 @@ namespace ComicBookGallery.Controllers
 {
     public class ComicBooksController : Controller
     {
-        public string Detail()
+         public ActionResult Detail()
         {
-
-            return "U Drew First Blood!!!";
+            if(DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                return Redirect("/");
+            }
+            else
+            {
+                return Content("Now we r cooking with gas");
+            }                      
+            
         }
     }
 }
