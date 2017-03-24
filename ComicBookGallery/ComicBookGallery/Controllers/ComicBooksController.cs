@@ -11,15 +11,15 @@ namespace ComicBookGallery.Controllers
     {
          public ActionResult Detail()
         {
-            if(DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
-            {
-                return Redirect("/");
-            }
-            else
-            {
-                return Content("Now we r cooking with gas");
-            }                      
-            
+            //if(DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
+            //{
+            //    return Redirect("/");
+            //}
+            //else
+            //{
+            //    return Content("Now we r cooking with gas");
+            //}                      
+            return View();
         }
     }
 }
