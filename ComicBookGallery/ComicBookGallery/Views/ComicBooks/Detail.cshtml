@@ -4,6 +4,16 @@
     var desc = " Final Issue!! Spidey Vs Mysterio!!!";
     var seriesTitle = "The Amazing Spiderman";
     var issNum = 700;
+    int pea = 320;
+
+    var artists = new string []
+    {
+        "Blind Man",
+        "Good People",
+        "Strong Guy",
+        "Power Man",
+        "Iron Fist",
+    };
 
 
 
@@ -19,9 +29,27 @@
 </head>
 <body>
     <div>
-    <h1> @seriesTitle </h1> <br />
+        <h1> @seriesTitle </h1> <br />
         <h1> @desc</h1> <br />
         <h1> Issue #      @issNum </h1>
+
+        <h1> Cost of Issue # @issNum is @pea</h1>
+        @if (@artists.Length > 0)
+        {
+
+            <h3>   Below are a List of contributing artists  </h3>
+            <div>
+                @foreach (var item in artists)
+                {
+                    <h3>    <li>  @item  </li>   </h3>
+                }
+
+            </div>
+      
+
+            }
+
     </div>
 </body>
+
 </html>
