@@ -11,14 +11,21 @@ namespace ComicBookGallery.Controllers
     {
          public ActionResult Detail()
         {
-            //if(DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
-            //{
-            //    return Redirect("/");
-            //}
-            //else
-            //{
-            //    return Content("Now we r cooking with gas");
-            //}                      
+            ViewBag.Desc = " Final Issue!! Spidey Vs Mysterio!!!";
+            ViewBag.SeriesTitle = "The Amazing Spiderman";
+            ViewBag.IssNum = 700;
+            ViewBag.Pea = 320;
+
+            ViewBag.Artists = new string[]
+                {
+            "Blind Man",
+            "Good People",
+            "Strong Guy",
+            "Power Man",
+            "Iron Fist",
+                };
+
+
             return View();
         }
     }
