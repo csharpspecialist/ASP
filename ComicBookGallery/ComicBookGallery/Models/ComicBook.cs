@@ -16,5 +16,26 @@ namespace ComicBookGallery.Models
         public bool Favorite { get; set; }
 
 
+        public string DisplayText
+
+        {
+            get
+            {    // this is a read only property since it does not have a setter
+
+                return SeriesTitle + "#  " + IssueNumber;
+            }                   
+
+        }
+        //series -  title - issueNumber.jpg
+        public string CoverImageFileName
+        {
+            get 
+            {// this is a read only property since it does not have a setter
+               return SeriesTitle.Replace("", "-")
+                    .ToLower() + "." + IssueNumber + ".jpg";
+            }
+
+        }                
+
     }
 }
