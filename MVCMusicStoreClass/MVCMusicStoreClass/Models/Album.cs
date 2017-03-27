@@ -21,5 +21,10 @@ namespace MVCMusicStoreClass.Models
         public decimal Price { get; set; }
         public string AlbumArtUrl { get; set; }
 
+       
+        public Artist Artist { get; set; }
+
+
+
     }
 }
