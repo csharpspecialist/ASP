@@ -4,6 +4,8 @@ using static System.Console;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ComicBookGallery.Models;
+
 
 namespace ComicBookGallery.Controllers
 {
@@ -11,22 +13,23 @@ namespace ComicBookGallery.Controllers
     {
          public ActionResult Detail()
         {
-            ViewBag.Desc = " Final Issue!! Spidey Vs Mysterio!!!";
-            ViewBag.SeriesTitle = "The Amazing Spiderman";
-            ViewBag.IssNum = 700;
-            ViewBag.Pea = 320;
-
-            ViewBag.Artists = new string[]
+            var cBook = new ComicBook()
+            {
+                SeriesTitle = "The Amazing Spiderman",
+                IssueNumber = 700,
+                DescriptionHTML = "<p> Final Issue!! Spidey Vs Mysterio!!!</p>",
+                Artists = new Artists[]
                 {
-            "Blind Man",
-            "Good People",
-            "Strong Guy",
-            "Power Man",
-            "Iron Fist",
-                };
+                   new Artists(){Name = "Big shot", Role = "Blind Man" },
+                  new Artists() {Name = "Writer", Role = "Good People" },
+                  new Artists()   {Name = "Heavyweight", Role = "Colossus" },
+                   new Artists()   {Name = "Hero", Role = "Power Man" },
+                   new Artists()    {Name = "Side Kick", Role = "Iron Fist" },                                          
+                }
 
+            };                                   
 
-            return View();
+            return View(cBook);
         }
     }
 }
