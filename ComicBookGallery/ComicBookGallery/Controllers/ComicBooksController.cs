@@ -20,11 +20,11 @@ namespace ComicBookGallery.Controllers
                 DescriptionHTML = "<p> Final Issue!! Spidey Vs Mysterio!!!</p>",
                 Artists = new Artists[]
                 {
-                   new Artists(){Name = "Big shot", Role = "Blind Man" },
+                  new Artists() {Name = "Big shot", Role = "Blind Man" },
                   new Artists() {Name = "Writer", Role = "Good People" },
-                  new Artists()   {Name = "Heavyweight", Role = "Colossus" },
-                   new Artists()   {Name = "Hero", Role = "Power Man" },
-                   new Artists()    {Name = "Side Kick", Role = "Iron Fist" },                                          
+                  new Artists() {Name = "Heavyweight", Role = "Colossus" },
+                  new Artists() {Name = "Hero", Role = "Power Man" },
+                  new Artists() {Name = "Side Kick", Role = "Iron Fist" },                                          
                 }
 
             };                                   
