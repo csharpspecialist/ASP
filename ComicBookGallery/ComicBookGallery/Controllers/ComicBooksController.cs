@@ -13,21 +13,21 @@ namespace ComicBookGallery.Controllers
     {
          public ActionResult Detail()
         {
-            var cBook = new ComicBook()
-            {
-                SeriesTitle = "The Amazing Spiderman",
-                IssueNumber = 700,
-                DescriptionHTML = "<p> Final Issue!! Spidey Vs Mysterio!!!</p>",
-                Artists = new Artists[]
-                {
-                  new Artists() {Name = "Big shot", Role = "Blind Man" },
-                  new Artists() {Name = "Writer", Role = "Good People" },
-                  new Artists() {Name = "Heavyweight", Role = "Colossus" },
-                  new Artists() {Name = "Hero", Role = "Power Man" },
-                  new Artists() {Name = "Side Kick", Role = "Iron Fist" },                                          
-                }
+            //var cBook = new ComicBook()
+            //{
+            //    SeriesTitle = "The Amazing Spiderman",
+            //    IssueNumber = 700,
+            //    DescriptionHTML = "<p> Final Issue!! Spidey Vs Mysterio!!!</p>",
+            //    Artists = new Artists[]
+            //    {
+            //      new Artists() {Name = "Big shot", Role = "Blind Man" },
+            //      new Artists() {Name = "Writer", Role = "Good People" },
+            //      new Artists() {Name = "Heavyweight", Role = "Colossus" },
+            //      new Artists() {Name = "Hero", Role = "Power Man" },
+            //      new Artists() {Name = "Side Kick", Role = "Iron Fist" },                                          
+            //    }
 
-            };                                   
+            //};                                   
 
             return View(cBook);
         }
