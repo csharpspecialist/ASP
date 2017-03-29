@@ -13,6 +13,7 @@ namespace ComicBookGallery.Data
         {
             new ComicBook()
             {
+                BookID = 1,
                 SeriesTitle = "The Amazing Spiderman",
                 IssueNumber = 700,
                 DescriptionHTML = "<p> Final Issue!! Spidey Vs Mysterio!!!</p>",
@@ -31,6 +32,7 @@ namespace ComicBookGallery.Data
 
              new ComicBook()
             {
+                BookID = 2,
                 SeriesTitle = "The Amazing Spider-man",
                 IssueNumber = 657,
                 DescriptionHTML = " Fantastic 4 Three Tie In!!! \n Spidey visits the FF for a very private wakeup!!!",
@@ -48,6 +50,8 @@ namespace ComicBookGallery.Data
 
                       new ComicBook()
             {
+
+                BookID = 3,                          
                 SeriesTitle = "Bone",
                 IssueNumber = 50,
                 DescriptionHTML = " Spidey Fights for his life!!! Villians are smarter than they look!!!",
