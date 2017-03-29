@@ -29,7 +29,7 @@ namespace ComicBookGallery.Controllers
 
             //};                                   
 
-            return View(cBook);
+            return View();
         }
     }
 }

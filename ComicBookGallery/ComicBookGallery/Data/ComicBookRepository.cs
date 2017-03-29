@@ -11,14 +11,7 @@ namespace ComicBookGallery.Data
     {
         private static ComicBook[] _comicBooks = new ComicBook[]
         {
-
-        };
-
-            
-
-     public ComicBook GetComicBook()
-        {
-            var cBook = new ComicBook()
+            new ComicBook()
             {
                 SeriesTitle = "The Amazing Spiderman",
                 IssueNumber = 700,
@@ -30,11 +23,66 @@ namespace ComicBookGallery.Data
                   new Artists() {Name = "Heavyweight", Role = "Colossus" },
                   new Artists() {Name = "Hero", Role = "Power Man" },
                   new Artists() {Name = "Side Kick", Role = "Iron Fist" },
-               }
+               },
+            Favorite = false
 
-            };
+            },
 
-            return cBook;
+
+             new ComicBook()
+            {
+                SeriesTitle = "The Amazing Spider-man",
+                IssueNumber = 657,
+                DescriptionHTML = " Fantastic 4 Three Tie In!!! \n Spidey visits the FF for a very private wakeup!!!",
+                Artists = new Artists[]
+               {
+                  new Artists() { Role = "Writer", Name = "Smasher" },
+                  new Artists() { Role = "Pencil", Name = "Piper" },
+                  new Artists() { Role = "Inks", Name = "Ms Marvel" },
+                  new Artists() { Role = "Colors", Name = "Man-Child" },
+                  new Artists() { Role = "Letters", Name = "Round Mound" },
+               },
+                Favorite = false
+
+            },
+
+                      new ComicBook()
+            {
+                SeriesTitle = "Bone",
+                IssueNumber = 50,
+                DescriptionHTML = " Spidey Fights for his life!!! Villians are smarter than they look!!!",
+                Artists = new Artists[]
+               {
+                  new Artists() { Role = "Writer", Name = "Batman" },
+                  new Artists() { Role = "Pencil", Name = "Surfer" },
+                  new Artists() { Role = "Inks", Name = "Fire Guy" },
+                  new Artists() { Role = "Colors", Name = "Watcher" },
+                  new Artists() { Role = "Letters", Name = "Glorious" },
+               },
+                Favorite = false
+
+            }
+
+        };
+
+            
+
+     public ComicBook GetComicBook(int id )
+        {
+            ComicBook comicBookToReturn = null;
+
+            foreach (var comicBook in _comicBooks)
+            {
+                if(comicBook.BookID == id)
+                {
+                    comicBookToReturn = comicBook;
+                    break;
+                }
+
+
+            }
+
+            return comicBookToReturn;
 
         }
     }
