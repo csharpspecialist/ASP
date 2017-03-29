@@ -31,8 +31,8 @@ namespace ComicBookGallery.Models
         {
             get 
             {// this is a read only property since it does not have a setter
-               return SeriesTitle.Replace("", "-")
-                    .ToLower() + "." + IssueNumber + ".jpg";
+               return SeriesTitle.Replace(" ", "-")
+                    .ToLower() + "-" + IssueNumber + ".jpg";
             }
 
         }                
