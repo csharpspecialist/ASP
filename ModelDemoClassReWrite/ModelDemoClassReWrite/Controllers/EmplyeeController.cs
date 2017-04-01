@@ -8,7 +8,7 @@ namespace ModelDemoClassReWrite.Controllers
 {
     public class EmplyeeController : Controller
     {
-        // GET: Emplyee
+        // GET: Employee
         public ActionResult Index()
         {
             return View();

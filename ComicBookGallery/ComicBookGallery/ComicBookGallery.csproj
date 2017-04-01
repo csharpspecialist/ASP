@@ -165,7 +165,7 @@
     <Content Include="Images\colossus3.jpg" />
     <Content Include="Images\colossus4.jpg" />
     <Content Include="Images\the-amazing-spider-man-657.jpg" />
-    <Content Include="Images\the-amazing-spider-man-400.jpg" />
+    <Content Include="Images\the-amazing-spider-man-700.jpg" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
