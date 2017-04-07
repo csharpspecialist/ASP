@@ -9,17 +9,30 @@ namespace MVCMusicStoreClass.Controllers
 {
     public class StoreController : Controller
     {
+        MusicStoreEntities storeDB = new MusicStoreEntities();
         // GET: Store
+        //public ActionResult Index()
+        //{
+        //    var genres = new List<Genre>
+        //    {
+        //    new Genre { Name = "Disco"},
+        //    new Genre { Name = "Jazz"},
+        //    new Genre { Name = "Rock"}
+        //    };
+        //      return View(genres);
+        //}
+
+
         public ActionResult Index()
         {
-            var genres = new List<Genre>
-            {
-            new Genre { Name = "Disco"},
-            new Genre { Name = "Jazz"},
-            new Genre { Name = "Rock"}
-            };
-              return View(genres);
+            var genres = storeDB.Genres.ToList();
+            return View(genres);
         }
+
+
+
+
+
 
         //GET: /STORE/BROWSE
         public ActionResult Browse(string genre)
