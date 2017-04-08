@@ -43,12 +43,12 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             var entry = new Entry()
             {
-                Date = DateTime.Today,
-                ActivityId = 2,
-                Duration = 2                               
+                Date = DateTime.Today
+                                   
                                 
             };
-       
+
+            ViewBag.ActivitiesSelectListItems = new SelectList(Data.Data.Activities, "ID", "Name");
             return View(entry);
         }
 
@@ -62,9 +62,12 @@ namespace Treehouse.FitnessFrog.Controllers
 
                 return RedirectToAction("Index");
 
-            }           
+            }
 
-            entry.ActivityId = 2;
+            ViewBag.ActivitiesSelectListItems = new SelectList(
+                Data.Data.Activities, "ID", "Name");
+
+            //entry.ActivityId = 2;
 
             return View(entry);
         }

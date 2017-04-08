@@ -26,5 +26,14 @@ namespace MVCTemplate1.Controllers
 
             return View();
         }
+
+        public ActionResult LifeStyle()
+        {
+            ViewBag.Message = "Your Life Style page.";
+
+            return View();
+        }
+
+
     }
 }

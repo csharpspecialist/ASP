@@ -23,6 +23,10 @@ namespace Treehouse.FitnessFrog.Models
         /// </summary>
         public Entry()
         {
+
+            
+
+
         }
 
         /// <summary>
