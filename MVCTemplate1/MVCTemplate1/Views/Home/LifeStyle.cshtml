@@ -6,3 +6,15 @@
 <h2>LifeStyle</h2>
 <h3>@ViewBag.Message</h3>
 
+
+@Html.DropDownList("Categories", new List<SelectListItem>
+{
+    new SelectListItem {Text = "CategoryID" ,Value = "1",Selected = true },
+    new SelectListItem {Text = "CategoryName" ,Value = "2" },
+    new SelectListItem {Text = "Description" ,Value = "3" },
+    new SelectListItem {Text = "Picture" ,Value = "4" } },
+    "Select Category ID")
+
+
+
+
