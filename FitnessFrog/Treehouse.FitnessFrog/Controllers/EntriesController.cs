@@ -43,8 +43,7 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             var entry = new Entry()
             {
-                Date = DateTime.Today
-                                   
+                Date = DateTime.Today                                   
                                 
             };
 
@@ -55,9 +54,18 @@ namespace Treehouse.FitnessFrog.Controllers
         [ HttpPost]
         public ActionResult Add(Entry entry)
         {
+            ModelState.AddModelError("", "This is a global message");
 
-            if(ModelState.IsValid)
+            //if no Duration Field val errors.. make sure 
+            //that the duration is greater than zero
+            if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
             {
+                ModelState.AddModelError(("Duration"), "The duration value must be greater than 0");
+            }
+
+            if (ModelState.IsValid)
+            {
+                            
                 _entriesRepository.AddEntry(entry);
 
                 return RedirectToAction("Index");

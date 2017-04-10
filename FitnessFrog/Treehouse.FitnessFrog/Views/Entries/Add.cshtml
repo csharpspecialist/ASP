@@ -5,11 +5,12 @@
 @{
     ViewBag.Title = "Add Entry";
 
-
 }
 
-
 <h2>@ViewBag.Title</h2>
+
+@Html.ValidationSummary()
+
 
 @using (Html.BeginForm())
 {
@@ -28,16 +29,12 @@
                 <input name="Intensity" type="radio" value="Medium" /> Medium
                 <input name="Intensity" type="radio" value="High" /> High
 
-
             </div>
-
-
 
             <div class="form-group">
                 @Html.LabelFor(m => m.ActivityId, new { @class = "control-label" })
                 @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems,"", new { @class = "form-control" })
-
-                
+                @Html.ValidationMessageFor(m => m.Activity)                
                 
             </div>
 
@@ -61,8 +58,7 @@
                         @Html.RadioButtonFor(m => m.Intensity, Entry.IntensityLevel.High) @Entry.IntensityLevel.High
                     </label>
 
-                </div>
-              
+                </div>              
                 
             </div>
 
@@ -73,10 +69,8 @@
                         @Html.CheckBoxFor(m => m.Exclude) @Html.DisplayNameFor(m => m.Exclude)
                     </label>
 
-                </div>
-    
-
-           
+                </div>   
+                           
             </div>
 
         </div>

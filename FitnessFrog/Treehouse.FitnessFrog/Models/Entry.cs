@@ -73,6 +73,8 @@ namespace Treehouse.FitnessFrog.Models
         /// <summary>
         /// The activity for the entry.
         /// </summary>
+        /// 
+        [Required]
         public Activity Activity { get; set; }
 
         /// <summary>
@@ -89,10 +91,13 @@ namespace Treehouse.FitnessFrog.Models
         /// Whether or not this entry should be excluded when calculating the total fitness activity.
         /// </summary>
         public bool Exclude { get; set; }
-
+         
         /// <summary>
         /// The notes for the entry.
         /// </summary>
+        /// 
+        
+        [MaxLength(100, ErrorMessage ="The Notes field cannot be longer than 200 Characters")]
         public string Notes { get; set; }
     }
 }
