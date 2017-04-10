@@ -73,6 +73,8 @@ namespace Treehouse.FitnessFrog.Models
         /// <summary>
         /// The activity for the entry.
         /// </summary>
+        /// 
+        [Required]
         public Activity Activity { get; set; }
 
         /// <summary>
