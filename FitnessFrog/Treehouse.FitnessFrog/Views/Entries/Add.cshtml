@@ -9,7 +9,7 @@
 
 <h2>@ViewBag.Title</h2>
 
-@Html.ValidationSummary()
+@Html.ValidationSummary("The following errors were found", new { @class = "alert alert-danger" }) 
 
 
 @using (Html.BeginForm())
@@ -24,17 +24,17 @@
 
             </div>
 
-            <div>
+            @*<div>
                 <input name="Intensity" type="radio" value="Low" /> Low
                 <input name="Intensity" type="radio" value="Medium" /> Medium
                 <input name="Intensity" type="radio" value="High" /> High
 
-            </div>
+            </div>*@
 
             <div class="form-group">
                 @Html.LabelFor(m => m.ActivityId, new { @class = "control-label" })
-                @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems,"", new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Activity)                
+                @Html.DropDownListFor(m => m.ActivityId, (SelectList)ViewBag.ActivitiesSelectListItems,new { @class = "form-control" })
+                     
                 
             </div>
 
