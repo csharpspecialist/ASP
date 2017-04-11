@@ -13,7 +13,7 @@ namespace MVCMusicStoreClass.Controllers
         public ActionResult Index()
         {
             var singers = from a in GetAlbumList()
-                            orderby a.AlbumID
+                            orderby a.AlbumId
                             select a;
 
             return View(singers);
@@ -26,18 +26,18 @@ namespace MVCMusicStoreClass.Controllers
                 {
                  new Album
                 {
-                   AlbumID = 1,
-                   GenreID = 100,
-                   ArtistID = 100,
+                   AlbumId = 1,
+                   GenreId = 100,
+                   ArtistId = 100,
                    Title = "MVC Agony",
                     Price = 25,
                     AlbumArtUrl ="http://scarycoders.com"
                 },
                new Album
                 {
-                   AlbumID = 2,
-                   GenreID = 200,
-                   ArtistID = 200,
+                   AlbumId = 2,
+                   GenreId = 200,
+                   ArtistId = 200,
                    Title = "C# Revenge",
                     Price = 20,
                     AlbumArtUrl ="http://keyboardtrippers.com"
@@ -45,9 +45,9 @@ namespace MVCMusicStoreClass.Controllers
                                    
                   new Album
                 {
-                   AlbumID = 3,
-                   GenreID = 300,
-                   ArtistID = 300,
+                   AlbumId = 3,
+                   GenreId = 300,
+                   ArtistId = 300,
                    Title = "VS Horrors",
                     Price = 20,
                     AlbumArtUrl ="http://nightprogrammers.com"
@@ -55,18 +55,18 @@ namespace MVCMusicStoreClass.Controllers
 
                  new Album
                 {
-                   AlbumID = 4,
-                   GenreID = 400,
-                   ArtistID = 400,
+                   AlbumId = 4,
+                   GenreId = 400,
+                   ArtistId = 400,
                    Title = "MVC Agony",
                     Price = 65,
                     AlbumArtUrl ="http://stickycoders.com"
                 },
                  new Album
                 {
-                   AlbumID = 5,
-                   GenreID = 500,
-                   ArtistID = 500,
+                   AlbumId = 5,
+                   GenreId = 500,
+                   ArtistId = 500,
                    Title = "Internet Savior",
                     Price = 55,
                     AlbumArtUrl ="http://SaveOurLaptops.com"
