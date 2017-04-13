@@ -15,7 +15,7 @@
     }
 }
 
-<!DOCTYPE html lang="en">
+<!DOCTYPE public html lang="en">
 <html>
 <head>
     <meta charset="utf-8" />
@@ -43,8 +43,7 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+                <ul class="nav navbar-nav"></ul>
                 <a href="@Url.Action("Add", "Entries")" style="visibility: @GetAddEntryButtonVisibility()"
                    class="btn btn-primary navbar-btn navbar-right">
                     <span class="glyphicon glyphicon-plus"></span> Add Entry Here!!
@@ -61,7 +60,10 @@
         </footer>
     </div>
 
+    <script src="~/Scripts/jqueryval.js"></script>   
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
