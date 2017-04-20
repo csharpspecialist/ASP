@@ -54,18 +54,13 @@ namespace Treehouse.FitnessFrog.Controllers
         [ HttpPost]
         public ActionResult Add(Entry entry)
         {
-           
-
             //if no Duration Field val errors.. make sure 
             //that the duration is greater than zero
-            if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
-            {
-                ModelState.AddModelError(("Duration"), "The duration value must be greater than 0");
-            }
+            ValidateEntry(entry);
 
             if (ModelState.IsValid)
             {
-                            
+
                 _entriesRepository.AddEntry(entry);
 
                 return RedirectToAction("Index");
@@ -80,6 +75,14 @@ namespace Treehouse.FitnessFrog.Controllers
             return View(entry);
         }
 
+        private void ValidateEntry(Entry entry)
+        {
+            if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
+            {
+                ModelState.AddModelError(("Duration"), "The duration value must be greater than 0");
+            }
+        }
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -87,8 +90,34 @@ namespace Treehouse.FitnessFrog.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
+
+            Entry entry = _entriesRepository.GetEntry((int)id);
+
+            if(entry == null)
+            {
+                return HttpNotFound();
+            }
+
+
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Edit(Entry entry)
+        {
+
+            //todo validate the entry
+            if(entry)
+            //todo validate the entry
+
+            //todo validate the entry
+
+            //todo validate the entry
+
+            return View(entry);
+        }
+
+
 
         public ActionResult Delete(int? id)
         {
