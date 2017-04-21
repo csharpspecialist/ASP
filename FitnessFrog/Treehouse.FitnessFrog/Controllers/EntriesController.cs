@@ -67,21 +67,19 @@ namespace Treehouse.FitnessFrog.Controllers
 
             }
 
-            ViewBag.ActivitiesSelectListItems = new SelectList(
-                Data.Data.Activities, "ID", "Name");
+             Total();
 
             //entry.ActivityId = 2;
 
             return View(entry);
         }
 
-        private void ValidateEntry(Entry entry)
+        private void Total()
         {
-            if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
-            {
-                ModelState.AddModelError(("Duration"), "The duration value must be greater than 0");
-            }
+            ViewBag.ActivitiesSelectListItems = new SelectList(
+                Data.Data.Activities, "ID", "Name");
         }
+
 
         public ActionResult Edit(int? id)
         {
@@ -97,7 +95,7 @@ namespace Treehouse.FitnessFrog.Controllers
             {
                 return HttpNotFound();
             }
-
+            //TODO populate activities select list items viewbag property
 
             return View();
         }
@@ -106,13 +104,19 @@ namespace Treehouse.FitnessFrog.Controllers
         public ActionResult Edit(Entry entry)
         {
 
-            //todo validate the entry
-            if(entry)
-            //todo validate the entry
+            ValidateEntry(entry);
+            //TODO validate the entry
 
-            //todo validate the entry
+        if (ModelState.IsValid)
+            {
+                _entriesRepository.UpdateEntry(entry);
 
-            //todo validate the entry
+                return RedirectToAction("Index");
+            }
+
+
+
+
 
             return View(entry);
         }
@@ -128,5 +132,15 @@ namespace Treehouse.FitnessFrog.Controllers
 
             return View();
         }
+
+        private void ValidateEntry(Entry entry)
+        {
+            if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
+            {
+                ModelState.AddModelError(("Duration"), "The duration value must be greater than 0");
+            }
+        }
+
+
     }
 }
