@@ -43,11 +43,12 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             var entry = new Entry()
             {
-                Date = DateTime.Today                                   
+                Date = DateTime.Today                         
                                 
             };
 
-            ViewBag.ActivitiesSelectListItems = new SelectList(Data.Data.Activities, "ID", "Name");
+            ActivitiesSelectListItem();
+
             return View(entry);
         }
 
@@ -67,20 +68,11 @@ namespace Treehouse.FitnessFrog.Controllers
 
             }
 
-             Total();
-
-            //entry.ActivityId = 2;
-
+            ActivitiesSelectListItem();
+               
             return View(entry);
-        }
-
-        private void Total()
-        {
-            ViewBag.ActivitiesSelectListItems = new SelectList(
-                Data.Data.Activities, "ID", "Name");
-        }
-
-
+        }            
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,14 +80,13 @@ namespace Treehouse.FitnessFrog.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-
             Entry entry = _entriesRepository.GetEntry((int)id);
 
             if(entry == null)
             {
                 return HttpNotFound();
             }
-            //TODO populate activities select list items viewbag property
+            ActivitiesSelectListItem();
 
             return View();
         }
@@ -114,14 +105,9 @@ namespace Treehouse.FitnessFrog.Controllers
                 return RedirectToAction("Index");
             }
 
-
-
-
-
+            ActivitiesSelectListItem();
             return View(entry);
         }
-
-
 
         public ActionResult Delete(int? id)
         {
@@ -141,6 +127,11 @@ namespace Treehouse.FitnessFrog.Controllers
             }
         }
 
+        private void ActivitiesSelectListItem()
+        {
+            ViewBag.ActivitiesSelectListItems = new SelectList(
+                Data.Data.Activities, "ID", "Name");
+        }
 
     }
 }
