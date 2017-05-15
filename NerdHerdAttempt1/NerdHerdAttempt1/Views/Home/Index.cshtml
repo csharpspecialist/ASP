@@ -5,7 +5,16 @@
 }
 
 <h2> Upcoming Dinners Page</h2>
+<style>
+    .max{
+        font-size: 20px;
+        color:magenta;
 
+    }
+
+
+
+</style>
 
 <ul>
 
@@ -23,7 +32,7 @@
 
 <p>
     @*@Html.ActionLink("Create New Dinner", "Create")*@ 
-    <button type="button" onclick="location.href='@Url.Action("Create", "Home")'">Create New Dinner</button>
+    <button type="button" class="max" onclick="location.href='@Url.Action("Create", "Home")'">Create New Dinner</button>
 </p>
 
 
