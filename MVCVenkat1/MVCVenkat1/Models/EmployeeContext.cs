@@ -9,7 +9,7 @@ namespace MVCVenkat1.Models
 {
     public class EmployeeContext : DbContext
     {
-        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
     }
 }

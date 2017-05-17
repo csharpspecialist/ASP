@@ -10,22 +10,18 @@ namespace MVCVenkat1.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
-        public ActionResult Details()
+        public ActionResult Details(int? id)
         {
-            Employee worker = new Employee()
-            {
-                EmployeeId = 2,
-                Name = "Jaques",
-                Gender = "Male",
-                City = "Aqua"
+     EmployeeContext employeeContext = new EmployeeContext();
 
-            }; 
+            //Employee employee = employeeContext.Employees.Single(emp => emp.EmployeeId == id);
 
+            Employee employ = employeeContext.Employees.Single(emp => emp.EmployeeId == id);
        
             //if you don't pass the worker object 
             //below you will get a null reference
             //exception...your code blows up!!!!
-            return View(worker);
+            return View(employ);
         }
     }
 }
