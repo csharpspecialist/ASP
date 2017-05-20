@@ -11,7 +11,7 @@ namespace MVCVenkat1.Controllers
     {
 
 
-        public ActionResult Index()
+        public ActionResult EmpIndex()
         {
             EmployeeContext emp = new EmployeeContext();
             List<Employee> employ = emp.Employees.ToList();
