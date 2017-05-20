@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Countries Lisitngs";
+}
+
+<h2>Countries List</h2>
+
+<input type="button" value="Let's Go!" onclick="location.href='@Url.Action("GetDetails", "Home")'" />
+
+
+<input type="button" value="Work" onclick="location.href='@Url.Action("Index", "Employee")'" />
+
+
+
+@Html.ActionLink("Back to List", "Index", "Employee")
+
+<ul>
+    @foreach (var country in ViewBag.Countries)
+    {
+
+        <li> @country  </li>
+    }
+   
+
+
+
+
+</ul>
+
+<input class="textBox" id="pass" type="text" />
+<input type="text" name="Email">
+
+
