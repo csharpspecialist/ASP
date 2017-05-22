@@ -11,10 +11,10 @@ namespace MVCVenkat1.Controllers
     {
 
 
-        public ActionResult EmpIndex()
+        public ActionResult EmpIndex(int departmentID)
         {
             EmployeeContext emp = new EmployeeContext();
-            List<Employee> employ = emp.Employees.ToList();
+            List<Employee> employ = emp.Employees.Where(empl => empl.DepartmentID == departmentID).ToList();
 
             return View(employ);
         }
@@ -36,6 +36,14 @@ namespace MVCVenkat1.Controllers
             return View(employ);
         }
 
+        public ActionResult EmpList()
+        {
+
+            EmployeeContext emp = new EmployeeContext();
+            List<Employee> employ = emp.Employees.ToList();
+
+            return View(employ);
+        }
 
 
 

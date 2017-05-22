@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<MVCVenkat1.Models.Employee>
+
+@using MVCVenkat1.Models;
+
+@{
+    ViewBag.Title = "List Of Employees";
+}
+
+<h2> List Of Employees</h2>
+
+
+
+<div style="font-size:20px">
+
+    <ul>
+
+        @foreach (Employee employee in @Model)
+        {
+
+            <li>
+                @Html.ActionLink(employee.FName, "Details", new { @id = employee.EmployeeId })
+            </li>
+
+        }
+    </ul>
+
+</div>
+
+

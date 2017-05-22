@@ -1,0 +1,99 @@
+﻿
+@{
+	ViewBag.Title = "Working";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> javascript If Else </title>
+
+	<style>
+		#big, #show {
+			font-size: 30px;
+		}
+
+		.blue {
+			font-size: 30px;
+			color: blue;
+		}
+
+		.green {
+			font-size: 30px;
+			color: green;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		var e1Smile;
+
+		var e2Smile;
+
+		var eS1;
+
+		var eS2;
+
+
+		function emojiTrouble (eS1, eS2){
+
+			e1Smile = document.getElementById("tBox1").value;
+
+			eS1 = e1Smile.toUpperCase();
+
+			e2Smile = document.getElementById("tBox2").value;
+
+			eS2 = e2Smile.toUpperCase();
+
+	if (eS1 == "YES" && eS2 == "YES")
+	{
+		document.getElementById("show").innerHTML = "We Are In trouble";
+	}
+	else if (eS1 == "YES" && eS2 == "NO" || eS1 == "NO" && eS2 == "YES")
+	{
+		document.getElementById("show").innerHTML = "We Are A OK Today!!!";
+	}
+	else if (eS1 == "NO" && eS2 == "NO") {
+		document.getElementById("show").innerHTML = "We Are In trouble";
+	}
+
+else
+{
+  document.write("No Way");
+
+
+}
+	}
+
+	</script>
+</head>
+<body>
+	<p id="big">
+		Are we in trouble???
+	</p>
+
+	<p class="blue"> Emoji 1...am I smiling?? <input type="text" id="tBox1" value="">    </p>
+
+	<p class="green"> Emoji 2...am I smiling?? <input type="text" id="tBox2" value="">    </p>
+
+	<button id="big" onclick="emojiTrouble()">   Answer Button   </button>
+
+	<p id="show">
+</body>
+</html>
+
+
+
+
+
+
+
+@*<h2>Working</h2>
+
+<input class="textBox" id="pass" type="text" />
+<input type="text" name="Email">*@
+
+

@@ -5,14 +5,14 @@
 
 <h2>Countries List</h2>
 
-<input type="button" value="Let's Go!" onclick="location.href='@Url.Action("GetDetails", "Home")'" />
+<input type="button" value="Get Details Method" onclick="location.href='@Url.Action("GetDetails", "Home")'" />
 
 
-<input type="button" value="Employee List" onclick="location.href='@Url.Action("EmpIndex", "Employee")'" />
+<input type="button" value="Employee List" onclick="location.href='@Url.Action("EmpList", "Employee")'" />
 
-@Html.ActionLink("Working Method", "Working", "Home")
+<input type="button" value="Emoji Trouble??" onclick="location.href='@Url.Action("Emoji", "Home")'" />
 
-@Html.ActionLink("Employee List", "EmpIndex", "Employee")
+@Html.ActionLink("Employee List", "EmpList", "Employee")
 
 <ul>
     @foreach (var country in ViewBag.Countries)

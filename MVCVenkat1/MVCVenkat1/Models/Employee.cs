@@ -15,5 +15,6 @@ namespace MVCVenkat1.Models
         public string LName { get; set; }
         public string Gender { get; set; }
         public string City { get; set; }
+        public int DepartmentID { get; set; }
     }
 }

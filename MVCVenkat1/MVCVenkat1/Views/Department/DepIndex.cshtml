@@ -1,0 +1,40 @@
+﻿@using MVCVenkat1.Models;
+
+@model IEnumerable<Department>
+
+@{
+    ViewBag.Title = "Department List";
+}
+
+<style>
+    .big {
+
+        font-size:20px;
+        font-family:Arial;
+        color:#e66b1a;
+    }
+
+
+
+</style>
+
+<div class="big">
+
+    <h2>Department List</h2>
+
+    <ul>
+
+        @foreach (Department department in @Model)
+        {
+
+            <li>
+                @Html.ActionLink(department.Name, "EmpIndex","Employee", new { departmentID = department.DepartmentID }, null)
+            </li>
+
+        }
+    </ul>
+
+
+</div>
+
+

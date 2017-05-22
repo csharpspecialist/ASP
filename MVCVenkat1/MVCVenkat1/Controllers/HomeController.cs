@@ -29,7 +29,7 @@ namespace MVCVenkat1.Controllers
         }
 
 
-        public ActionResult Working()
+        public ActionResult Emoji()
         {
             return View();
         }
