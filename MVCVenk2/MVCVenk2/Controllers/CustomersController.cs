@@ -36,6 +36,7 @@ namespace MVCVenk2.Controllers
             cust.Gender = formCollection["Gender"];
             cust.Salary = formCollection["Salary"];
             cust.City= formCollection["City"];
+            cust.PaymentType = formCollection["PaymentType"];
 
             CustomerBLL cbl = new CustomerBLL();
             cbl.AddCustomer(cust);

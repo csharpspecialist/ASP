@@ -13,6 +13,8 @@ namespace BLL
         public string Gender { get; set; }
         public string Salary { get; set; }
         public string City { get; set; }
+        public string PaymentType { get; set; }
+
 
     }
 

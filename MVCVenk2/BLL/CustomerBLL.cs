@@ -36,6 +36,7 @@ namespace BLL
                         custom.Gender = rdr["Gender"].ToString();
                         custom.Salary = rdr["Salary"].ToString();
                         custom.City = rdr["City"].ToString();
+                        custom.PaymentType = rdr["PaymentType"].ToString();
 
                         cust.Add(custom);
 
@@ -72,18 +73,19 @@ namespace BLL
                 paramSalary.ParameterName = "@Salary";
                 paramSalary.Value = customer.Salary;
                 cmd.Parameters.Add(paramSalary);
-
-
-
-                //SqlParameter paramSalary = new SqlParameter();
-                //paramSalary.ParameterName = "@Salary";
-                //paramSalary.Value = customer.Salary;
-                //cmd.Parameters.Add(paramSalary);
-
+                
+      
                 SqlParameter paramCity = new SqlParameter();
                 paramCity.ParameterName = "@City";
                 paramCity.Value = customer.City;
                 cmd.Parameters.Add(paramCity);
+
+                SqlParameter paramPayment = new SqlParameter();
+                paramPayment.ParameterName = "@PaymentType";
+                paramPayment.Value = customer.PaymentType;
+                cmd.Parameters.Add(paramPayment);
+
+
 
                 con.Open();
                 cmd.ExecuteNonQuery();
