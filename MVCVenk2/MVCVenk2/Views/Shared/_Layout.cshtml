@@ -1,6 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .no {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - V Demo  </title>
@@ -17,7 +24,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Home Page", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+              
+                    @Html.ActionLink("Home Page", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
+
                 @Html.ActionLink("Customers List", "Index", "Customers", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Customers Create", "Create", "Customers", new { area = "" }, new { @class = "navbar-brand" })
             </div>
@@ -32,7 +42,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - MVC For The Real World!!!</p>
         </footer>
     </div>
 

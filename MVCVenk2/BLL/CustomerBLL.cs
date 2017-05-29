@@ -92,5 +92,62 @@ namespace BLL
 
             }
         }
+
+
+        public void SaveCustomers(Customers customer)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spSaveCustomer", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter paramCustID = new SqlParameter();
+                paramCustID.ParameterName = "@CustID";
+                paramCustID.Value = customer.CustomerID;
+                cmd.Parameters.Add(paramCustID);
+
+
+
+                SqlParameter paramName = new SqlParameter();
+                paramName.ParameterName = "@Fname";
+                paramName.Value = customer.Fname;
+                cmd.Parameters.Add(paramName);
+
+                SqlParameter paramGender = new SqlParameter();
+                paramGender.ParameterName = "@Gender";
+                paramGender.Value = customer.Gender;
+                cmd.Parameters.Add(paramGender);
+
+                SqlParameter paramSalary = new SqlParameter();
+                paramSalary.ParameterName = "@Salary";
+                paramSalary.Value = customer.Salary;
+                cmd.Parameters.Add(paramSalary);
+
+
+                SqlParameter paramCity = new SqlParameter();
+                paramCity.ParameterName = "@City";
+                paramCity.Value = customer.City;
+                cmd.Parameters.Add(paramCity);
+
+                SqlParameter paramPayment = new SqlParameter();
+                paramPayment.ParameterName = "@PaymentType";
+                paramPayment.Value = customer.PaymentType;
+                cmd.Parameters.Add(paramPayment);
+
+
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+
+
+
+
+        }
+
+
     }
 }
