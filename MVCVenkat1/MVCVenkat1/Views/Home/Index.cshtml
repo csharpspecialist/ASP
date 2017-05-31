@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Countries Lisitngs";
+}
+
+
+<br />
+<h2>Countries List</h2>
+
+<input type="button" value="Get Details Method" onclick="location.href='@Url.Action("GetDetails", "Home")'" />
+
+
+<input type="button" value="Employee List" onclick="location.href='@Url.Action("EmpList", "Employee")'" />
+
+<input type="button" value="Emoji Trouble??" onclick="location.href='@Url.Action("Emoji", "Home")'" />
+
+@Html.ActionLink("Employee List", "EmpList", "Employee")
+
+<ul>
+    @foreach (var country in ViewBag.Countries)
+    {
+
+        <li> @country  </li>
+    }
+       
+
+</ul>
+
+<input class="textBox" id="pass" type="text" />
+<input type="text" name="Email">
+
+
