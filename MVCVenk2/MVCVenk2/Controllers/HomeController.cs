@@ -22,5 +22,32 @@ namespace MVCVenk2.Controllers
             };
             return View();
         }
+
+
+        public ActionResult Parallax()
+        {
+            return View();
+
+        }
+
+
+        public ActionResult Scroll()
+        {
+            return View();
+
+        }
+
+        public ActionResult Work()
+        {
+            return View();
+
+        }
+
+        public ActionResult SmoothV4()
+        {
+            return View();
+
+        }
+
     }
 }

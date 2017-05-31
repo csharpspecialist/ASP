@@ -125,11 +125,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Beach Hottie 110.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="cShelter3.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="media\Beach Hottie 110.jpg" />
+    <Content Include="media\cShelter1.jpg" />
+    <Content Include="media\cShelter2.jpg" />
+    <Content Include="media\cShelter3.jpg" />
+    <Content Include="media\cShelter4.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
@@ -141,6 +148,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="styles\example.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +174,10 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Home\Parallax.cshtml" />
+    <Content Include="Views\Home\Scroll.cshtml" />
+    <Content Include="Views\Home\Work.cshtml" />
+    <Content Include="Views\Home\SmoothV4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

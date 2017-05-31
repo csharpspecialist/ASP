@@ -42,7 +42,8 @@ namespace MVCVenk2.Controllers
 
 
         [HttpPost]
-        public ActionResult Edit(Customers customer)
+        //[ActionName("Edit")]
+        public ActionResult Edit_Get(Customers customer)
         {
             if(ModelState.IsValid)
             { 
@@ -57,6 +58,25 @@ namespace MVCVenk2.Controllers
         }
 
 
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult Edit_Post(int id)
+        {
+            CustomerBLL customerBLL = new CustomerBLL();
+            Customers customer = customerBLL.xCustomers.Single(x => x.CustomerID == id);
+            UpdateModel(customer, new string[] { "CustomerID", "Fname", "Salary", "City", "PaymentType" });
+
+            if (ModelState.IsValid)
+            {
+              
+                customerBLL.SaveCustomers(customer);
+
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
+
+        }
 
 
 
