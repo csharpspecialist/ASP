@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Planets";
+}
+
+<h2>Planets Of The Solar System</h2>
+
+<ul>
+
+@foreach (var item in ViewBag.Worlds)
+{
+   <li>
+       @item
+   </li>
+}
+
+</ul>
