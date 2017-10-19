@@ -1,0 +1,74 @@
+﻿@model MVCPracByHand.Models.Tire
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TireWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TireWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ratio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ratio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diameter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diameter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberInStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberInStock)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

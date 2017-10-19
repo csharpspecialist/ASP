@@ -11,6 +11,7 @@ namespace BLL
     {
         public int  CustomerID { get; set; }
         [Required]
+        [Display (Name ="First Name")]
         public string Fname { get; set; }
         [Required]
         public string Gender { get; set; }
